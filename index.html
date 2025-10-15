@@ -1,0 +1,232 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Weekly MRI Highlights | Lab</title>
+  <meta name="description" content="Weekly curated highlights of MRI-and-brain research across top journals.">
+  <style>
+    :root{
+      --bg:#f6f7f3;
+      --panel:#ffffff;
+      --ink:#111111;
+      --muted:#5a5f66;
+      --border:#e6e7e2;
+      --accent:#1f2937;
+      --tag:#f1f3ef;
+      --tag-border:#e0e3dc;
+      --skeptic:#7a1f1f;
+      --why:#1f3a5f;
+      --credit:#6b7280;
+    }
+    *{box-sizing:border-box}
+    html,body{margin:0;padding:0;background:var(--bg);color:var(--ink);font:16px/1.6 system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial}
+    h1,h2{font-family: ui-serif, Georgia, 'Times New Roman', Times, serif}
+    a{color:var(--accent);text-decoration:none}
+    a:hover{text-decoration:underline}
+    header{position:sticky;top:0;z-index:10;background:rgba(246,247,243,.85);backdrop-filter:saturate(1.2) blur(6px);border-bottom:1px solid var(--border)}
+    .wrap{max-width:1100px;margin:0 auto;padding:14px 20px}
+    .brand{display:flex;align-items:center;gap:12px}
+    .brand h1{margin:0;font-size:26px;font-weight:800;letter-spacing:.2px}
+    nav{margin-top:10px;display:flex;flex-wrap:wrap;gap:10px;align-items:center;color:var(--muted)}
+    nav a{padding:0 2px}
+    nav .dot{opacity:.6}
+    main{padding:28px 0 80px}
+    .hero{display:flex;align-items:center;gap:16px;color:var(--muted);font-size:14px}
+    section{margin:26px 0;padding:18px;border:1px solid var(--border);border-radius:16px;background:var(--panel);box-shadow:0 4px 16px rgba(17,17,17,.04)}
+    section h2{margin:0 0 8px;font-size:22px}
+    .subtitle{color:var(--muted);margin:0 0 12px;font-size:14px}
+    ol{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:14px}
+    li.article{border:1px solid var(--border);border-radius:14px;background:#fff;overflow:hidden}
+    .row{display:grid;grid-template-columns:260px 1fr;gap:0}
+    .thumbwrap{position:relative;border-right:1px solid var(--border);background:#eef1eb;min-height:170px}
+    .thumb{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block}
+    .credit{position:absolute;left:8px;bottom:8px;background:rgba(255,255,255,.85);border:1px solid var(--border);border-radius:6px;padding:2px 6px;font-size:12px;color:var(--credit);max-width:92%;overflow:hidden;white-space:nowrap;text-overflow:ellipsis}
+    .content{padding:12px 14px}
+    .item-title{font-weight:700;margin:0 0 6px;font-size:17px}
+    .sum{margin:0 6px 8px 0}
+    .why{margin:0 0 6px;font-style:italic;color:var(--why)}
+    .skeptic{margin:0 0 6px;color:var(--skeptic)}
+    .ref{margin:0 0 8px;color:#333;word-break:break-word;font-size:14px}
+    .tags{display:flex;gap:6px;flex-wrap:wrap}
+    .tag{font-size:12px;padding:2px 8px;border-radius:999px;background:var(--tag);border:1px solid var(--tag-border);color:#444}
+    .meta{display:flex;justify-content:space-between;gap:10px;align-items:center;color:var(--muted);font-size:13px}
+    .updated{margin-top:2px}
+    footer{color:var(--muted);border-top:1px solid var(--border)}
+    .kbd{font-family:ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;background:#f3f5f0;border:1px solid var(--border);border-radius:6px;padding:2px 6px}
+    details{margin-top:8px}
+    details > summary{cursor:pointer;color:#334155}
+    @media (max-width:780px){
+      .row{grid-template-columns:1fr}
+      .thumbwrap{height:200px;border-right:none;border-bottom:1px solid var(--border)}
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="wrap">
+      <div class="brand">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+          <circle cx="12" cy="12" r="10" stroke="#111" stroke-width="1.5"/>
+          <path d="M6 14c3-6 9-6 12 0" stroke="#111" stroke-width="1.5" fill="none"/>
+          <circle cx="12" cy="12" r="2" fill="#111"/>
+        </svg>
+        <h1>Weekly MRI Highlights</h1>
+      </div>
+      <nav aria-label="Sections">
+        <a href="#method">Neuroimaging Method</a><span class="dot"> · </span>
+        <a href="#aging">Lifespan Development & Aging</a><span class="dot"> · </span>
+        <a href="#cr">Cognitive Reserve</a><span class="dot"> · </span>
+        <a href="#ad">AD Continuum Biomarkers</a><span class="dot"> · </span>
+        <a href="#gmi">Geriatric Mental Illness</a>
+      </nav>
+      <div class="meta hero">
+        <div class="updated">Last updated: <span id="lastUpdated">—</span></div>
+        <div>Journals: Nature (incl. Nat Commun) · Science (incl. Sci Adv) · Lancet · JAMA · Age & Ageing · Brain · PNAS · Imaging Neuroscience · Biol Psychiatry · Mol Psychiatry · Neurology · Radiology · PLOS Biology · Alzheimer’s & Dementia</div>
+      </div>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <!-- Methods -->
+    <section id="method">
+      <h2>Neuroimaging Method</h2>
+      <p class="subtitle">Latest MRI & brain methods across top journals.</p>
+      <ol>
+        <li class="article">
+          <div class="row">
+            <div class="thumbwrap">
+              <img class="thumb" src="https://s.wordpress.com/mshots/v1/https%3A%2F%2Fwww.nature.com%2Farticles%2Fs41467-025-60812-3?w=520" alt="Article preview"
+                   onerror="this.onerror=null;this.src='https://placehold.co/520x320?text=Preview+unavailable';">
+              <div class="credit">Image: Article page preview</div>
+            </div>
+            <div class="content">
+              <p class="item-title"><a href="https://www.nature.com/articles/s41467-025-60812-3" target="_blank" rel="noopener">Cholinergic basal forebrain neurons regulate vascular–glymphatic coupling in aging</a></p>
+              <p class="sum">BOLD–CSF coupling and cholinergic function indicate aging-related clearance impairments; basal forebrain alterations relate to neurovascular–glymphatic coupling.</p>
+              <p class="why"><strong>Why it matters:</strong> Connects neurovascular regulation and glymphatic clearance in aging.</p>
+              <p class="skeptic"><strong>Reviewer’s skepticism:</strong> Human analyses are largely correlational; causal links remain tentative.</p>
+              <p class="ref">Chuang, K. H., et al. (2025). <em>Nature Communications</em>. <a href="https://doi.org/10.1038/s41467-025-60812-3">https://doi.org/10.1038/s41467-025-60812-3</a></p>
+              <div class="tags"><span class="tag">Clinical translation</span><span class="tag">Methodological innovation</span></div>
+            </div>
+          </div>
+        </li>
+      </ol>
+    </section>
+
+    <!-- Aging -->
+    <section id="aging">
+      <h2>Lifespan Development & Aging</h2>
+      <p class="subtitle">Structure, function, neurovascular/glymphatic aging in humans.</p>
+      <ol>
+        <li class="article">
+          <div class="row">
+            <div class="thumbwrap">
+              <img class="thumb" src="https://s.wordpress.com/mshots/v1/https%3A%2F%2Fwww.nature.com%2Farticles%2Fs41467-025-63628-3?w=520" alt="Article preview"
+                   onerror="this.onerror=null;this.src='https://placehold.co/520x320?text=Preview+unavailable';">
+              <div class="credit">Image: Article page preview</div>
+            </div>
+            <div class="content">
+              <p class="item-title"><a href="https://www.nature.com/articles/s41467-025-63628-3" target="_blank" rel="noopener">Age-related constraints on the spatial geometry of the brain</a></p>
+              <p class="sum">Geometric deformation fields from structural MRI reveal age-related patterns of expansion and compression across cortical axes with cognitive correlates.</p>
+              <p class="why"><strong>Why it matters:</strong> Introduces geometric deformation as an aging marker beyond thickness/volume.</p>
+              <p class="skeptic"><strong>Reviewer’s skepticism:</strong> Cross‑protocol stability and biological interpretability remain open.</p>
+              <p class="ref">Escalante, Y. Y., et al. (2025). <em>Nature Communications</em>. <a href="https://doi.org/10.1038/s41467-025-63628-3">https://doi.org/10.1038/s41467-025-63628-3</a></p>
+              <div class="tags"><span class="tag">Methodological innovation</span></div>
+            </div>
+          </div>
+        </li>
+      </ol>
+    </section>
+
+    <!-- Cognitive Reserve -->
+    <section id="cr">
+      <h2>Cognitive Reserve</h2>
+      <p class="subtitle">CR/BR/resilience frameworks with MRI central, including MRI→PET prediction.</p>
+      <ol>
+        <li class="article">
+          <div class="row">
+            <div class="thumbwrap">
+              <img class="thumb" src="https://s.wordpress.com/mshots/v1/https%3A%2F%2Falz-journals.onlinelibrary.wiley.com%2Fdoi%2Ffull%2F10.1002%2Fdad2.70159?w=520" alt="Article preview"
+                   onerror="this.onerror=null;this.src='https://placehold.co/520x320?text=Preview+unavailable';">
+              <div class="credit">Image: Article page preview</div>
+            </div>
+            <div class="content">
+              <p class="item-title"><a href="https://alz-journals.onlinelibrary.wiley.com/doi/full/10.1002/dad2.70159" target="_blank" rel="noopener">Classifying mild cognitive impairment from normal cognition: fMRI complexity matches tau PET</a></p>
+              <p class="sum">Functional MRI complexity measures differentiate MCI from controls at levels comparable to tau PET, implying functional integrity proxies pathology.</p>
+              <p class="why"><strong>Why it matters:</strong> Supports MRI as a PET surrogate for resilience modeling.</p>
+              <p class="skeptic"><strong>Reviewer’s skepticism:</strong> Cross‑sectional design; predictive value over time untested.</p>
+              <p class="ref">Jann, K., et al. (2025). <em>Alzheimer’s &amp; Dementia</em>. <a href="https://doi.org/10.1002/dad2.70159">https://doi.org/10.1002/dad2.70159</a></p>
+              <div class="tags"><span class="tag">Methodological innovation</span><span class="tag">Clinical translation</span></div>
+            </div>
+          </div>
+        </li>
+      </ol>
+    </section>
+
+    <!-- AD Continuum -->
+    <section id="ad">
+      <h2>Imaging Biomarker in the AD Continuum</h2>
+      <p class="subtitle">Preclinical → MCI → AD; multimodal MRI; MRI–PET links; progression risk.</p>
+      <ol>
+        <li class="article">
+          <div class="row">
+            <div class="thumbwrap">
+              <img class="thumb" src="https://s.wordpress.com/mshots/v1/https%3A%2F%2Fwww.nature.com%2Farticles%2Fs41598-025-19586-3?w=520" alt="Article preview"
+                   onerror="this.onerror=null;this.src='https://placehold.co/520x320?text=Preview+unavailable';">
+              <div class="credit">Image: Article page preview</div>
+            </div>
+            <div class="content">
+              <p class="item-title"><a href="https://www.nature.com/articles/s41598-025-19586-3" target="_blank" rel="noopener">A radiomics model predicts progression from mild cognitive impairment to Alzheimer’s disease using structural MRI</a></p>
+              <p class="sum">Structural MRI radiomics from ADNI predicts MCI→AD conversion with validation AUC≈0.88, combining imaging with cognitive indices.</p>
+              <p class="why"><strong>Why it matters:</strong> Demonstrates practical MRI‑only progression prediction.</p>
+              <p class="skeptic"><strong>Reviewer’s skepticism:</strong> External multi‑center generalization remains to be proven.</p>
+              <p class="ref">Li, Y., et al. (2025). <em>Scientific Reports</em>. <a href="https://doi.org/10.1038/s41598-025-19586-3">https://doi.org/10.1038/s41598-025-19586-3</a></p>
+              <div class="tags"><span class="tag">Methodological innovation</span><span class="tag">Clinical translation</span></div>
+            </div>
+          </div>
+        </li>
+      </ol>
+    </section>
+
+    <!-- Geriatric Mental Illness -->
+    <section id="gmi">
+      <h2>Geriatric Mental Illness</h2>
+      <p class="subtitle">Late-life depression, anxiety, psychosis, bipolar — MRI-centered evidence.</p>
+      <ol>
+        <li class="article">
+          <div class="row">
+            <div class="thumbwrap">
+              <img class="thumb" src="https://s.wordpress.com/mshots/v1/https%3A%2F%2Fwww.nature.com%2Farticles%2Fs41398-025-03587-x?w=520" alt="Article preview"
+                   onerror="this.onerror=null;this.src='https://placehold.co/520x320?text=Preview+unavailable';">
+              <div class="credit">Image: Article page preview</div>
+            </div>
+            <div class="content">
+              <p class="item-title"><a href="https://www.nature.com/articles/s41398-025-03587-x" target="_blank" rel="noopener">Inflammatory and MRI perfusion biomarkers predict depression outcome</a></p>
+              <p class="sum">Perfusion MRI and peripheral inflammation at baseline relate to 6‑month outcomes in depression, highlighting vmPFC/OFC/MFG perfusion patterns.</p>
+              <p class="why"><strong>Why it matters:</strong> Connects perfusion MRI to prognosis in late‑life depression.</p>
+              <p class="skeptic"><strong>Reviewer’s skepticism:</strong> Generalizability to strictly geriatric cohorts remains to be tested.</p>
+              <p class="ref">Xiong, W., et al. (2025). <em>Translational Psychiatry</em>. <a href="https://doi.org/10.1038/s41398-025-03587-x">https://doi.org/10.1038/s41398-025-03587-x</a></p>
+              <div class="tags"><span class="tag">Methodological innovation</span><span class="tag">Clinical translation</span></div>
+            </div>
+          </div>
+        </li>
+      </ol>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap" style="padding:18px 20px;">
+      <small>© Lab Weekly MRI Highlights · Light theme for Google Sites embedding or static hosting.</small>
+    </div>
+  </footer>
+
+  <script>
+    (function(){ 
+      const d = new Date();
+      const pad = (n)=> String(n).padStart(2,'0');
+      const s = d.getFullYear() + '-' + pad(d.getMonth()+1) + '-' + pad(d.getDate());
+      document.getElementById('lastUpdated')?.textContent = s;
+    })();
+  </script>
+</body>
+</html>
