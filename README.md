@@ -1,2 +1,0 @@
-# LabLabWebSite
-LabLab Website
